@@ -12,5 +12,11 @@ func main() {
 	languages[2] = "ruby"
 	languages[3] = "php"
 	languages[4] = "java"
-	fmt.Println(languages)
+
+	languages2 := [5]string{"Ruby", "GO", "javascript", "java", "C"}
+	fmt.Println(languages2)
+
+	for index, lang := range languages {
+		fmt.Println("index:", index, "languange:", lang)
+	}
 }
