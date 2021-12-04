@@ -21,11 +21,38 @@ func main() {
 	// }
 
 	//SLICE
-	var gamingConsoles []string
+	// var gamingConsoles []string
 
-	gamingConsoles = append(gamingConsoles, "PlayStation4")
-	gamingConsoles = append(gamingConsoles, "xbox1")
+	// gamingConsoles = append(gamingConsoles, "PlayStation4")
+	// gamingConsoles = append(gamingConsoles, "xbox1")
 
-	fmt.Println(gamingConsoles)
+	// fmt.Println(gamingConsoles)
 
+	//MAP
+
+	var myMap map[string]int
+	myMap = map[string]int{}
+	myMap["ruby"] = 9
+	myMap["java"] = 5
+	myMap["c"] = 10
+
+	myMap2 := map[string]string{"ruby": "is beautiful", "java": "awesome"}
+	fmt.Println(myMap["c"])
+	fmt.Println(myMap2)
+
+	for key, value := range myMap {
+		fmt.Println("key: ", key, "value: ", value)
+	}
+
+	//delete map
+
+	fmt.Println("===============================")
+
+	delete(myMap, "ruby")
+	for key, value := range myMap {
+		fmt.Println("key: ", key, "value: ", value)
+	}
+
+	value, isAvailable := myMap["REACT"]
+	fmt.Println(value, isAvailable)
 }
