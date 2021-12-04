@@ -30,29 +30,43 @@ func main() {
 
 	//MAP
 
-	var myMap map[string]int
-	myMap = map[string]int{}
-	myMap["ruby"] = 9
-	myMap["java"] = 5
-	myMap["c"] = 10
+	// var myMap map[string]int
+	// myMap = map[string]int{}
+	// myMap["ruby"] = 9
+	// myMap["java"] = 5
+	// myMap["c"] = 10
 
-	myMap2 := map[string]string{"ruby": "is beautiful", "java": "awesome"}
-	fmt.Println(myMap["c"])
-	fmt.Println(myMap2)
+	// myMap2 := map[string]string{"ruby": "is beautiful", "java": "awesome"}
+	// fmt.Println(myMap["c"])
+	// fmt.Println(myMap2)
 
-	for key, value := range myMap {
-		fmt.Println("key: ", key, "value: ", value)
+	// for key, value := range myMap {
+	// 	fmt.Println("key: ", key, "value: ", value)
+	// }
+
+	// //delete map
+
+	// fmt.Println("===============================")
+
+	// delete(myMap, "ruby")
+	// for key, value := range myMap {
+	// 	fmt.Println("key: ", key, "value: ", value)
+	// }
+
+	// value, isAvailable := myMap["REACT"]
+	// fmt.Println(value, isAvailable)
+
+	students := []map[string]string{
+		{"name": "agung", "score": "A"},
+		{"name": "hasan", "score": "A"},
+		{"name": "cucuk", "score": "C"},
+		{"name": "item", "score": "B"},
 	}
 
-	//delete map
+	fmt.Println(students)
 
-	fmt.Println("===============================")
-
-	delete(myMap, "ruby")
-	for key, value := range myMap {
-		fmt.Println("key: ", key, "value: ", value)
+	for _, student := range students {
+		fmt.Println(student["name"], "-", student["score"])
 	}
 
-	value, isAvailable := myMap["REACT"]
-	fmt.Println(value, isAvailable)
 }
